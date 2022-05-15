@@ -22,7 +22,7 @@ const Home = () => {
             setPosts(data);
             
             setCurrentPage(pageNumber);
-            if(isNaN(pageNumber)||pageNumber===0){
+            if(isNaN(pageNumber)){
                 setCurrentPage(0);
            
             }

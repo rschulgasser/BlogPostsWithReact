@@ -5,12 +5,15 @@ const comment = ({comment}) => {
     const { content, dateCreated, commenterName} = comment;
     
     return (
-        <div className="row">
-           <div class="media-body">
-               <h5 class="mt-0">{commenterName}<small class="ml-1">{format(new Date(dateCreated), 'EEEE LLLL do, R')}</small></h5>
+        <div className="row col-md-8">
+            <br/>
+          
+           <div className="col-md-8">
+               <h5 className="mt-8">{commenterName}<small className="ml-1">{format(new Date(dateCreated), 'EEEE LLLL do, R')}</small></h5>
                {content}
             </div>
          </div>
+         
 
     )
 }
