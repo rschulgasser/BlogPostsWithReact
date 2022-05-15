@@ -8,7 +8,7 @@ const Home = () => {
     const [blogPosts,setPosts] = useState([]);
     const [from, setFrom] = useState(0);
     const [to, setTo] = useState(3);
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(0);
     const {pageNumber} = useParams();
  
     
@@ -22,14 +22,14 @@ const Home = () => {
             setPosts(data);
             
             setCurrentPage(pageNumber);
-            if(isNaN(pageNumber)){
+            if(isNaN(pageNumber)||pageNumber===0){
                 setCurrentPage(0);
            
             }
           
            
-            setFrom(3*currentPage-3);
-            setTo(3*currentPage)
+            setFrom(3*currentPage);
+            setTo(3*currentPage+3)
           
            
         }
